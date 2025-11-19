@@ -23,6 +23,8 @@ input EmpleadoInput
 type Mutation
 {
     createEmpleado(input:EmpleadoInput):Empleado
+    updateEmpleado(id: Int!, input: EmpleadoInput!): Empleado    
+    deleteEmpleado(id: Int!): Boolean!
 }
 type Departamento
 {

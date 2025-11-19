@@ -1,0 +1,43 @@
+Ejemplos de querys y mutaciones  para probar en Graphiql
+
+
+{saludar (name:"Alex Pozo")}
+
+
+//Listar todos los empleados
+query {empleados {_id nombre sueldo}}
+
+
+//Crear un empleado
+
+mutation {
+createEmpleado(input:{
+nombre: "Alexis Sanchez"
+sueldo: 1500
+}) {_id nombre sueldo}
+}
+
+
+//Modificar un empleado
+mutation {
+  updateEmpleado(
+    id: 2,
+    input: {
+      nombre: "Sobeyda Rosero",
+      sueldo: 1350.25
+    }
+  )
+  {
+    _id
+    nombre
+    sueldo
+  }
+}
+
+
+
+//Eliminar un empleado por medio de su ID
+
+mutation {
+  deleteEmpleado(id: 2) 
+}
